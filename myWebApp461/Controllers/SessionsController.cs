@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using myAspData.Models;
 using myWebApp461.Models;
 
 namespace myWebApp461.Controllers

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using myAspData.Models;
+
 
 namespace myCoreWebPages21.Models
 {
@@ -13,6 +15,9 @@ namespace myCoreWebPages21.Models
         {
         }
 
-        public DbSet<myCoreWebPages21.Models.Product> Product { get; set; }
+        public DbSet<Product> Product { get; set; }
+
+        public DbSet<myAspData.Models.Session> Session { get; set; }
+
     }
 }

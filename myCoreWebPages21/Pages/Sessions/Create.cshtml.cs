@@ -6,8 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using myAspData.Models;
+using myCoreWebPages21.Models;
 
-namespace myCoreWebPages21.Pages.Products
+namespace myCoreWebPages21.Pages.Sessions
 {
     public class CreateModel : PageModel
     {
@@ -24,7 +25,7 @@ namespace myCoreWebPages21.Pages.Products
         }
 
         [BindProperty]
-        public Product Product { get; set; }
+        public Session Session { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -33,7 +34,7 @@ namespace myCoreWebPages21.Pages.Products
                 return Page();
             }
 
-            _context.Product.Add(Product);
+            _context.Session.Add(Session);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

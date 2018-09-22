@@ -1,0 +1,49 @@
+﻿@page
+@model myCoreWebPages21.Pages.Sessions.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Session</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Session.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Session.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Session.Abstract)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Session.Abstract)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Session.Presenter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Session.Presenter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Session.Attendees)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Session.Attendees)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Session.Timeslot)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Session.Timeslot)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Session.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

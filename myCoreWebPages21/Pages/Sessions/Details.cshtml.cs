@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using myAspData.Models;
 using myCoreWebPages21.Models;
 
-namespace myCoreWebPages21.Pages.Products
+namespace myCoreWebPages21.Pages.Sessions
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace myCoreWebPages21.Pages.Products
             _context = context;
         }
 
-        public Product Product { get; set; }
+        public Session Session { get; set; }
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
@@ -28,9 +28,9 @@ namespace myCoreWebPages21.Pages.Products
                 return NotFound();
             }
 
-            Product = await _context.Product.FirstOrDefaultAsync(m => m.Id == id);
+            Session = await _context.Session.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (Product == null)
+            if (Session == null)
             {
                 return NotFound();
             }

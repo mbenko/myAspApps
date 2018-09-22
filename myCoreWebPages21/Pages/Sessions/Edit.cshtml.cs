@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using myAspData.Models;
+using myCoreWebPages21.Models;
 
-namespace myCoreWebPages21.Pages.Products
+namespace myCoreWebPages21.Pages.Sessions
 {
     public class EditModel : PageModel
     {
@@ -20,7 +21,7 @@ namespace myCoreWebPages21.Pages.Products
         }
 
         [BindProperty]
-        public Product Product { get; set; }
+        public Session Session { get; set; }
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
@@ -29,9 +30,9 @@ namespace myCoreWebPages21.Pages.Products
                 return NotFound();
             }
 
-            Product = await _context.Product.FirstOrDefaultAsync(m => m.Id == id);
+            Session = await _context.Session.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (Product == null)
+            if (Session == null)
             {
                 return NotFound();
             }
@@ -45,7 +46,7 @@ namespace myCoreWebPages21.Pages.Products
                 return Page();
             }
 
-            _context.Attach(Product).State = EntityState.Modified;
+            _context.Attach(Session).State = EntityState.Modified;
 
             try
             {
@@ -53,7 +54,7 @@ namespace myCoreWebPages21.Pages.Products
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProductExists(Product.Id))
+                if (!SessionExists(Session.Id))
                 {
                     return NotFound();
                 }
@@ -66,9 +67,9 @@ namespace myCoreWebPages21.Pages.Products
             return RedirectToPage("./Index");
         }
 
-        private bool ProductExists(string id)
+        private bool SessionExists(string id)
         {
-            return _context.Product.Any(e => e.Id == id);
+            return _context.Session.Any(e => e.Id == id);
         }
     }
 }

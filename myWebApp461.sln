@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "myCoreWebPages21", "myCoreW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mySpaApp461", "mySpaApp461\mySpaApp461.csproj", "{41428FFD-F4FE-47C1-8F62-3B91288CB224}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myAspData", "myAspData\myAspData.csproj", "{9F5663E5-8868-4F38-9AE9-DD9726BDEB0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{41428FFD-F4FE-47C1-8F62-3B91288CB224}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41428FFD-F4FE-47C1-8F62-3B91288CB224}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41428FFD-F4FE-47C1-8F62-3B91288CB224}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F5663E5-8868-4F38-9AE9-DD9726BDEB0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F5663E5-8868-4F38-9AE9-DD9726BDEB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F5663E5-8868-4F38-9AE9-DD9726BDEB0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F5663E5-8868-4F38-9AE9-DD9726BDEB0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

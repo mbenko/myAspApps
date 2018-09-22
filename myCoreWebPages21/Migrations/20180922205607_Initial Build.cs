@@ -2,7 +2,7 @@
 
 namespace myCoreWebPages21.Migrations
 {
-    public partial class InitDB : Migration
+    public partial class InitialBuild : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

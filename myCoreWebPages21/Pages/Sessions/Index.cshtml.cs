@@ -6,8 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using myAspData.Models;
+using myCoreWebPages21.Models;
 
-namespace myCoreWebPages21.Pages.Products
+namespace myCoreWebPages21.Pages.Sessions
 {
     public class IndexModel : PageModel
     {
@@ -18,11 +19,11 @@ namespace myCoreWebPages21.Pages.Products
             _context = context;
         }
 
-        public IList<Product> Product { get;set; }
+        public IList<Session> Session { get;set; }
 
         public async Task OnGetAsync()
         {
-            Product = await _context.Product.ToListAsync();
+            Session = await _context.Session.ToListAsync();
         }
     }
 }

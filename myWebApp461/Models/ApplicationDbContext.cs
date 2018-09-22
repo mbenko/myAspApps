@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using myAspData.Models;
 
 namespace myWebApp461.Models
 {
@@ -14,6 +15,6 @@ namespace myWebApp461.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<myWebApp461.Models.Session> Sessions { get; set; }
+        public System.Data.Entity.DbSet<Session> Sessions { get; set; }
     }
 }
